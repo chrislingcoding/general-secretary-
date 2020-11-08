@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	double testScore;
+	cout << "\nEnter the test Score: ";
+	cin >> testScore; //taking input from user
+	//cheking the testScore and performing appropriate calculation
+	if (testScore < 60)
+		testScore = testScore + testScore * (0.10);
+	else if (testScore < 70 && testScore >= 60)
+		testScore = testScore + testScore * (0.08);
+	else if (testScore < 80 && testScore >= 70)
+		testScore = testScore + testScore * (0.06);
+	else if (testScore < 90 && testScore >= 80)
+		testScore = testScore + testScore * (0.04);
+	else if (testScore < 100 && testScore >= 90)
+		testScore = testScore + testScore * (0.02);
+
+	//printing the grades
+	if (testScore >= 90)
+		cout << "testScore is: " << testScore << "\nGrade is: A";
+	else if (testScore >= 80)
+		cout << "testScore is: " << testScore << "\nGrade is: B";
+	else if (testScore >= 70)
+		cout << "testScore is: " << testScore << "\nGrade is: C";
+	else if (testScore >= 40)
+		cout << "testScore is: " << testScore << "\nGrade is: D";
+	else if (testScore < 40)
+		cout << "testScore is: " << testScore << "\nGrade is: F";
+
+	return 0;
+}
